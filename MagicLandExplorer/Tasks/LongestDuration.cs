@@ -14,6 +14,7 @@ namespace MagicLandExplorer.Tasks
                                  from destination in category.Destinations
                                  orderby destination.GetDurationInMinutes() descending
                                  select destination).FirstOrDefault();
+            Console.WriteLine("The longest duration among all categories :");
             Console.WriteLine($"{LongestDuration.Name} - {LongestDuration.Duration}");
             Console.WriteLine("\n=========================================================================================\n");
 

@@ -15,7 +15,7 @@ namespace MagicLandExplorer.Tasks
                              orderby destination.Name
                              select destination;
 
-            
+            Console.WriteLine("Sort destinations by Name alphabetically :");
             foreach (var destination in SortedByname)
             {
                 Console.WriteLine($"{destination.Name}");

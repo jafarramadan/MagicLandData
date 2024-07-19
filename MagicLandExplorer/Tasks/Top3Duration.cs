@@ -14,7 +14,7 @@ namespace MagicLandExplorer.Tasks
                                    from destination in category.Destinations
                                    orderby destination.GetDurationInMinutes() descending
                                    select destination;
-            Console.WriteLine("top 3 duration");
+            Console.WriteLine("The top 3 durtaions :");
             int count = 0;
             foreach (var destination in TopThreeDurations)
             {

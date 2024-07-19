@@ -15,7 +15,7 @@ namespace MagicLandExplorer.Tasks
                                     where destination.GetDurationInMinutes() <100 && destination.GetDurationInMinutes() > 0
                                     select destination;
 
-
+            Console.WriteLine("Destinations with duration less than 100 minutes :");
             foreach (var destination in FilterdDestination)
             {
                 Console.WriteLine($"{destination.Name} - {destination.GetDurationInMinutes()}");

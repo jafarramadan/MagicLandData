@@ -15,7 +15,7 @@ namespace MagicLandExplorer.Tasks
                                where destination.Location == "Fantasyland"
                                select destination;
 
-
+            Console.WriteLine("Fantasylands destenations :");
             foreach (var destination in SharedLocation)
             {
                 Console.WriteLine($"{destination.Name} - {destination.Location}");
