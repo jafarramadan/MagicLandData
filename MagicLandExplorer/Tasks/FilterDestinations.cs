@@ -6,7 +6,24 @@ using System.Threading.Tasks;
 
 namespace MagicLandExplorer.Tasks
 {
-    internal class FilterDestinations
+    public class FilterDestinations
     {
+        public static void FilterByDuration(List<Category> categories) 
+        {
+            var FilterdDestination= from category in categories
+                                    from destination in category.Destinations
+                                    where destination.GetDurationInMinutes() <100 && destination.GetDurationInMinutes() > 0
+                                    select destination;
+
+
+            foreach (var destination in FilterdDestination)
+            {
+                Console.WriteLine($"{destination.Name} - {destination.GetDurationInMinutes()}");
+
+            }
+            Console.WriteLine("\n=========================================================================================\n");
+
+        }
+        
     }
 }

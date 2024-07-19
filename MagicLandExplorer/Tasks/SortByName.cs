@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace MagicLandExplorer.Tasks
 {
-    internal class SortByName
+    public class SortByName
     {
+        public static void GetSortByName(List<Category> categories)
+        {
+            var SortedByname=from category in categories
+                             from destination in category.Destinations
+                             orderby destination.Name
+                             select destination;
+
+            
+            foreach (var destination in SortedByname)
+            {
+                Console.WriteLine($"{destination.Name}");
+            }
+            Console.WriteLine("\n=========================================================================================\n");
+
+        }
+
     }
 }
