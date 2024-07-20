@@ -21,7 +21,6 @@ namespace MagicLandExplorer.Tasks
                 Console.WriteLine($"{destination.Name}");
             }
             Console.WriteLine("\n=========================================================================================\n");
-
         }
 
     }
