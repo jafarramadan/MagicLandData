@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace MagicLandExplorer
 {
-    internal class Category
+    public class Category
     {
+       public List<Destination> Destinations { get; set; }
+        public string CategoryName{ get; set; }
     }
 }
