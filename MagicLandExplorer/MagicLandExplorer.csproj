@@ -14,5 +14,11 @@
   <ItemGroup>
     <Page Include="data\MagicLandData.json" />
   </ItemGroup>
+	<ItemGroup>
+		
+		<None Update="data/MagicLandData.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 
 </Project>

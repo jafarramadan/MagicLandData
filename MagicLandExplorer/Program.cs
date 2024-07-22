@@ -12,8 +12,6 @@ namespace MagicLandExplorer
             Program.run();
         }
 
-
-
         public delegate void UserAction(List<Category> categories);
         static Dictionary<int, UserAction> userActions = new Dictionary<int, UserAction>
     {
@@ -25,7 +23,8 @@ namespace MagicLandExplorer
     };
         public static void run()
         {
-            string json = File.ReadAllText("C:\\Users\\LTUC\\source\\repos\\MagicLandExplorer\\MagicLandExplorer\\MagicLandExplorer\\data\\MagicLandData.json");
+            string filePath = Path.Combine(Environment.CurrentDirectory, "data/MagicLandData.json");
+            string json=File.ReadAllText(filePath);
             List<Category> categories = JsonConvert.DeserializeObject<List<Category>>(json);
             while (true)
             {
@@ -60,34 +59,7 @@ namespace MagicLandExplorer
                 }
 
 
-                //switch (num)
-                //{
-                //    case 1:
-
-                //        FilterDestinations.FilterByDuration(categories);
-                //        break;
-                //    case 2:
-
-                //        LongestDuration.GetLongestDuration(categories);
-                //        break;
-                //    case 3:
-
-                //        SortByName.GetSortByName(categories);
-                //        break;
-                //    case 4:
-
-                //        Top3Duration.GetTopThreeDuration(categories);
-                //        break;
-                //        case 5:
-
-                //        SharedLocation.GetsharedLocation(categories);
-                //        break;
-                //        case 6:
-                //        Environment.Exit(0);
-                //        break;
-
-                //        default: Console.WriteLine("Invalid input");
-                //        break;
+                
             }
             }
         }
